@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home</title>
+        <link rel="stylesheet" href="home.css">
+    </head>
+    <body>
+        <select id="select-theme" class="style-default">
+            <option selected value="default" style="background-color: var(--clr-bg);">Theme Default</option>
+            <option value="red" style="background-color: var(--clr-bg);">Theme Red</option>
+            <option value="green" style="background-color: var(--clr-bg);">Theme Green</option>
+            <option value="blue" style="background-color: var(--clr-bg);">Theme Blue</option>
+            <option value="azur" style="background-color: var(--clr-bg);">Theme Azur</option>
+        </select>
+        <h1 class="style-text" style="text-align: center; margin-bottom: 80px;">
+            Near Studio
+        </h1>
+        <div style="padding-inline: 5%">
+            <div class="style-default" style="margin: auto; margin-left: 5%; margin-right: 5%; margin-bottom: 100px;">
+                <input id="search-input-link" class="search-input" type="text" style="user-select: auto;">
+                <button id="search-btn-arrow" class="search-btn">
+                    <div class="search-arrow"></div>
+                </button>
+            </div>
+        </div>
+        <div id="fav-list" style="padding-inline: 20%; margin: auto;"></div>
+
+        <div id="modal-add" class="modal-bg">
+            <div class="modal-box style-default">
+                <h1 class="style-text">Create new link</h1>
+                <div style="margin-bottom: 100px; padding-inline: 20px">
+                    <h2 class="style-text" style="float: left">Address Link</h2>
+                    <input id="modal-input-link" class="style-default" style="float: right; margin-top: 8px">
+                </div>
+                <div style="margin-bottom: 100px; padding-inline: 20px">
+                    <h2 class="style-text" style="float: left">Image Link</h2>
+                    <input id="modal-input-img" class="style-default" style="float: right; margin-top: 8px">
+                </div>
+                <button class="style-default modal-btn" style="right: 105px" onclick="AddFavLink(); ShowModalAdd()">Valide</button>
+                <button class="style-default modal-btn" style="right: 20px" onclick="ShowModalAdd()">Cancel</button>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="home.js"></script>
+</html>
